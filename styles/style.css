@@ -124,6 +124,11 @@ body{
     padding: 115px 0 118px;
 }
 
+.inbox_image{
+    animation-name: Rotate;
+    animation-duration: 3s;
+}
+
 .inbox_response{
     max-width: 519px;
     width: 100%;
@@ -197,6 +202,11 @@ body{
 
 .communication{
     padding: 110px 0 105px;
+}
+
+.communication_image{
+   animation-name: Move;
+   animation-duration: 3s;
 }
 
 .communication_container{
@@ -439,6 +449,26 @@ body{
     font-size: 14px;
     line-height: 22px;
     color: rgba(43, 41, 45, 0.6);
+}
+
+@keyframes Move{
+    from{
+        transform: translateX(300px);
+    }
+
+    to{
+        transform: none;
+    }
+}
+
+@keyframes Rotate{
+    from{
+        transform: rotate(180deg);
+    }
+
+    to{
+        transform: none;
+    }
 }
 
 @keyframes Zoom{
@@ -954,7 +984,7 @@ body{
         flex-direction: column;
     }
 
-    .container-image{
+    .inbox_container-image{
         margin-bottom: 32px;
     }
 
@@ -1005,6 +1035,10 @@ body{
 
     .communication_title{
         margin-bottom: 19px;
+    }
+
+    .communication_container-image{
+        margin-bottom: 32px;
     }
 
     .communication_container{
