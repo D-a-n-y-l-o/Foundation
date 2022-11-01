@@ -39,6 +39,20 @@ body{
     color: rgba(43, 41, 45, 0.6);
 }
 
+.header_check{
+    width: 19px;
+    height: 2px;
+    background-color: rgba(44, 50, 65, 1);
+}
+
+.header_check:not(:last-of-type){
+    margin: 0 0 3px;
+}
+
+.header_checkbox, .header_check-wrapper{
+    display: none;
+}
+
 .header_link{
     font-size: 18px;
     line-height: 25px;
@@ -516,8 +530,82 @@ body{
         display: none;
     }
 
+    .header_checkbox, .header_check-wrapper{
+        display: block;
+    }
+
+    .header_menu{
+        position: relative;
+    }
+
     .header_nav{
         display: none;
+    }
+
+    .header_check{
+        transition: 1s;
+    }
+
+    .header_checkbox{
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        margin: 0;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    .header_checkbox:checked ~ .header_check-wrapper > .header_check:first-of-type{
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .header_checkbox:checked ~ .header_check-wrapper > .header_check:nth-of-type(2){
+        opacity: 0;
+    }
+
+    .header_checkbox:checked ~ .header_check-wrapper > .header_check:last-of-type{
+        transform: rotate(-45deg) translate(1px, -1px);
+    }
+
+    .header_checkbox:checked ~ .header_nav{
+        display: block;
+        position: fixed;
+        background-color: rgba(243, 198, 189, 1);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .header_check-wrapper{
+        position: relative;
+        z-index: 1;
+    }
+
+    .ul_flex{
+        flex-direction: column;
+    }
+
+    .header_ul{
+        margin: 0;
+    }
+
+    .header_li:not(:last-of-type){
+        margin-right: 0px;
+    }
+
+    .header_li{
+        margin-bottom: 5px;
+    }
+
+    .header_button{
+        width: 110px;
+        height: 25px;
+        font-size: 16px;
     }
 
     .flex_questions{
@@ -944,6 +1032,11 @@ body{
     .header{
         background-color: white;
         padding: 8px 0;
+    }
+
+    .header_checkbox:checked ~ .header_nav{
+        background-color: white;
+        border: 2px solid  #c7d2e7;
     }
 
     .logo img{
