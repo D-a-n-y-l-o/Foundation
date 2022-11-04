@@ -102,6 +102,59 @@ body{
     cursor: pointer;
 }
 
+.main{
+    background-color: rgba(243, 198, 189, 1);
+    padding-bottom: 126px;
+    position: relative;
+}
+
+.main_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_container > div:first-of-type{
+    z-index: 1;
+}
+
+.main_container > div:last-of-type{
+    z-index: 0;
+    position: absolute;
+    right: 25px;
+    top: 8px;
+}
+
+.main_title{
+    max-width: 754px;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 78px;
+    letter-spacing: -0.5px;
+    margin: 0 0 34px;
+    color: rgba(43, 41, 45, 1);
+}
+
+.main_text{
+    max-width: 456px;
+    font-size: 24px;
+    line-height: 34px;
+    margin: 0 0 58px;
+    color: rgba(43, 41, 45, 1);
+}
+
+.main_button-white{
+    width: 158px;
+    background: white;
+    color: rgba(48, 64, 196, 1);
+    margin-left: 10px;
+}
+
+.main_button-white:hover{
+    background-color: rgb(3, 26, 230);
+    color: #FFFFFF;
+}
+
 .questions{
     background-color: #F4F5F7;
     padding: 77px 0 76px;
@@ -319,6 +372,98 @@ body{
     color: white;
 }
 
+.hiring{
+    padding: 106px 0 90px;
+    text-align: center;
+}
+
+.hiring_container{
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.hiring_description{
+    margin-bottom: 63px;
+}
+
+.hiring_title-wide{
+    max-width: 555px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.5px;
+    color: #2B292D;
+    margin: 0px auto 20px;
+}
+
+.hiring_text-wide{
+    max-width: 555px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #2B292D;
+    margin: 0 auto 28px;
+}
+
+.hiring_button{
+    width: 247px;
+}
+
+.vacancies{
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 26px 25px;
+    border: 1px solid rgba(43, 41, 45, 0.2);
+    border-radius: 8px;
+}
+
+.vacancies:hover{
+    cursor: pointer;
+}
+
+.vacancies:not(:last-of-type){
+    margin-bottom: 20px;
+}
+
+.vacancy_pretitle{
+    width: 408px;
+    text-align: start;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.vacancy_pretitle-lower{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.vacancy_icon{
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.color-change{
+    color: white;
+    background-color: rgba(49, 65, 197, 1);
+    border: 1px solid rgba(49, 65, 197, 1);
+    transition: 300ms;
+}
+
+.vacancy-icon-rotate{
+    transform: rotate(90deg);
+    transition: 300ms;
+}
+
+.vacancy_text{
+    text-align: start;
+    margin-top: 3px;
+    max-width: 410px;
+    font-size: 18px;
+    line-height: 26px;
+    display: none;
+}
+
 .photos{
     padding: 0 0 91px;
     text-align: center;
@@ -372,7 +517,6 @@ body{
 }
 
 .start_img{
-    width: 100%;
     animation-name: Zoom;
     animation-duration: 3s;
 }
@@ -465,6 +609,100 @@ body{
     color: rgba(43, 41, 45, 0.6);
 }
 
+footer{
+    padding: 134px 0 52px;
+}
+
+.footer_container{
+    max-width: 1000px;
+}
+
+.footer_flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo_flex{
+    display: flex;
+    align-items: center;
+}
+
+.footer_logo{
+    margin-bottom: 26px;
+}
+
+.footer_title-logo{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #2B292D;
+}
+
+.footer_text-logo{
+    font-size: 18px;
+    line-height: 25px;
+    color: rgba(43, 41, 45, 0.6);
+}
+
+.footer_text{
+    max-width: 360px;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgba(43, 41, 45, 0.6);
+    margin-bottom: 25px;
+}
+
+.footer_links{
+    margin-bottom: 59px;
+}
+
+.footer_link{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer_link:not(:last-of-type){
+    margin-right: 10px;
+}
+
+.footer_title{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: #2B292D;
+    margin-bottom: 18px;
+}
+
+.footer_text-big{
+    font-size: 18px;
+    line-height: 30px;
+    color: rgba(43, 41, 45, 0.6);
+}
+
+.footer_border{
+    height: 1px;
+    background-color: rgba(43, 41, 45, 0.1);
+}
+
+.footer_container-lower{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.footer_ul{
+    display: flex;
+}
+
+.footer_li:not(:last-of-type){
+    margin-right: 10px;
+}
+
+.footer_text-small{
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(43, 41, 45, 0.6);
+}
+
 @keyframes Move{
     from{
         transform: translateX(300px);
@@ -513,6 +751,14 @@ body{
     }
 
     .brands-flex{
+        max-width: 1040px;
+    }
+
+    .footer_container{
+        max-width: 940px;
+    }
+
+    .footer_container-lower{
         max-width: 1040px;
     }
 }
@@ -606,6 +852,48 @@ body{
         width: 110px;
         height: 25px;
         font-size: 16px;
+    }
+
+    .main{
+        padding: 0;
+    }
+
+    .main_container{
+        display: block;
+    }
+
+    .main_title{
+        max-width: 525px;
+        font-size: 60px;
+        line-height: 72px; 
+        letter-spacing: -0.5px;
+        margin: 0 0 15px;
+    }
+
+    .main_text{
+        max-width: 355px;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 30px;
+    }
+
+    .main_button{
+        width: 125px;
+        font-size: 16px;
+        line-height: 13px;
+    }
+
+    .main_button-white{
+        margin-left: 8px;
+    }
+
+    .main_container > div:last-of-type{
+        position: static;
+        text-align: center;
+    }
+
+    .main_img{
+        width: 620px;
     }
 
     .flex_questions{
@@ -755,6 +1043,31 @@ body{
         justify-self: end;
     }
 
+    .hiring{
+        padding: 87px 0 113px;
+    }
+    
+    .hiring_description{
+        margin-bottom: 67px;
+    }
+    
+    .hiring_title-wide{
+        font-size: 48px;
+        line-height: 56px;
+        margin: 0 auto 14px;
+    }
+    
+    .hiring_text-wide{
+        max-width: 391px;
+        font-size: 20px;
+        line-height: 26px;
+        margin: 0 auto 27px;
+    }
+    
+    .hiring_button{
+        width: 247px;
+    }
+
     .photos{
         padding-bottom: 124px;
     }
@@ -806,6 +1119,10 @@ body{
         flex-direction: column-reverse;
     }
 
+    .start_img{
+        width: 100%;
+    }
+
     .start_title{
         max-width: 325px;
         font-size: 48px;
@@ -847,11 +1164,88 @@ body{
     .start_button{
         width: 290px;
     }
+
+    .footer{
+        padding: 49px 0 48px;
+    }
+
+    .footer_container{
+        max-width: 343px;
+        margin: 0 auto;
+    }
+
+    .footer_container-lower{
+        max-width: 343px;
+    }
+
+    .footer_flex{
+        display: block;
+    }
+
+    .logo_flex{
+        display: block;
+        text-align: center;
+    }
+
+    .footer_links{
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .footer_text{
+        display: none;
+    }
+
+    .footer_title{
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 28px;
+        color: #2B292D;
+        margin-bottom: 32px;
+    }
+
+    .footer_title:last-of-type{
+        margin-top: 25px;
+    }
+    
+    .footer_text-big{
+        font-size: 20px;
+        line-height: 30px;
+        color: rgba(43, 41, 45, 0.6);
+    }
+    
+    .footer_border{
+        display: none;
+    }
+    
+    .footer_text-small{
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(43, 41, 45, 0.6);
+        margin: 38px 0 27px;
+    }
 }
 
 @media screen and (max-width: 800px){
     .container{
         max-width: 500px;    
+    }
+
+    .main_title{
+        font-size: 52px;
+        line-height: 56px; 
+        letter-spacing: 0;
+    }
+
+    .main_text{
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+
+    .main_img{
+        width: 100%;
+        margin: 10px 0 10px;
     }
 
     .brands-flex{
@@ -877,6 +1271,19 @@ body{
     .pictures{
         width: 100%;
         justify-self: center;
+    }
+
+    .hiring_container{
+        max-width: 500px;
+    }
+
+    .vacancy_pretitle{
+        width: 200px;
+    }
+
+    .vacancy_text{
+        margin-top: 20px;
+        max-width: 100%;
     }
 
     .photos{
@@ -915,6 +1322,14 @@ body{
     .container{
         max-width: 430px;    
     }
+
+    .main_title{
+        max-width: 420px;
+    }
+
+    .main_text{
+        max-width: 330px;
+    }
     
     .brands-flex{
          max-width: 430px;
@@ -934,6 +1349,26 @@ body{
 
     .pictures_text{
         margin: 15px 0;
+    }
+
+    .hiring{
+        padding: 50px 0;
+    }
+
+    .hiring_container{
+        max-width: 430px;
+    }
+
+    .hiring_description{
+        margin-bottom: 35px;
+    }
+
+    .hiring_title-wide{
+        max-width: 390px;
+    }
+
+    .vacancy_pretitle-lower{
+        width: 120px;
     }
 
     .start_text{
@@ -967,6 +1402,14 @@ body{
 @media screen and (max-width: 480px){
     .container{
         max-width: 340px;    
+    }
+
+    .main_title{
+        max-width: 330px;
+    }
+
+    .main_text{
+        max-width: 300px;
     }
 
     .header{
@@ -1015,12 +1458,36 @@ body{
         max-width: 340px;
     }
 
+    .hiring_container{
+        max-width: 340px;
+    }
+
+    .hiring_title-wide{
+        max-width: 340px;
+    }
+
+    .hiring_text-wide{
+        max-width: 340px;
+    }
+
+    .vacancy_pretitle{
+        width: 130px;
+    }
+
     .photos{
         padding-bottom: 40px;
     }
 
     .start_text{
         max-width: 350px;
+    }
+
+    .footer_container{
+        max-width: 340px;
+    }
+
+    .footer_container-lower{
+        max-width: 340px;
     }
 }
 
@@ -1041,6 +1508,39 @@ body{
 
     .logo img{
         margin-right: 13px;
+    }
+
+    .main{
+        padding: 35px 0 36px;
+    }
+
+    .main_title{
+        max-width: 290px;
+        font-size: 50px;
+        line-height: 50px;
+        letter-spacing: -0.3125px;
+        margin-bottom: 24px;
+    }
+
+    .main_text{
+        max-width: 290px;
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 30px;
+    }
+
+    .main_button{
+        width: 310px;
+    }
+
+    .main_button-white{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .main_img{
+        width: 100%;
+        margin: 33px 0 0;
     }
 
     .flex_questions{
@@ -1203,6 +1703,78 @@ body{
         justify-self: center;
     }
 
+    .hiring{
+        padding: 115px 0 78px;
+    }
+
+    .hiring_container{
+        max-width: 310px;
+    }
+
+    .hiring_description{
+        margin-bottom: 39px;
+    }
+
+    .hiring_title-wide{
+        max-width: 310px;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -0.357143px;
+        margin: 0 auto 18px;
+    }
+
+    .hiring_text-wide{
+        max-width: 310px;
+        font-size: 24px;
+        line-height: 34px;
+        margin: 0 auto 30px;
+    }
+
+    .hiring_button{
+        width: 310px;
+    }
+
+    .vacancies{
+        padding: 0;
+    }
+
+    .vacancies > .flex{
+        display: grid;
+        grid-template-columns: 240px 50px;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0 20px;
+    }
+
+    .vacancy_pretitle{
+        padding: 19px 0 0 25px;
+        width: 160px;
+    }
+
+    .vacancy_pretitle-lower{
+        grid-row: 2/3;
+        padding: 0 0 0 25px;
+        text-align: start;
+        font-size: 16px;
+        line-height: 22px;
+        width: 215px;
+    }
+
+    .vacancy-icon{
+        grid-row: span 2;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .vacancy_text{
+        margin: 0 25px 19px 25px;
+        max-width: 310px;
+    }
+
+    .hiring_pretitle-lower{
+        font-size: 16px;
+        line-height: 22px;
+    }
+
     .photos-grid{
         gap: 17px;
         grid-template-columns: 1fr;
@@ -1278,11 +1850,36 @@ body{
         max-width: 260px;
         text-align: start;
     }
+
+    .footer{
+        padding: 40px 0 23px;
+    }
+
+    .footer_container{
+        max-width: 310px;
+    }
+
+    .footer_container-lower{
+        max-width: 310px;
+    }
+
+    .footer_title{
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+        color: #2B292D;
+        margin-bottom: 18px;
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 320px){
     .container{
         max-width: 290px;
+    }
+
+    .main_button{
+        width: 290px;
     }
 
     .brands-flex{
@@ -1296,6 +1893,36 @@ body{
     .container-image_img{
         max-width: 290px;
         width: 100%;
+    }
+
+    .hiring_container{
+        max-width: 290px;
+    }
+
+    .hiring_title-wide{
+        max-width: 290px;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -0.357143px;
+        margin: 0 auto 18px;
+    }
+
+    .hiring_text-wide{
+        max-width: 290px;
+        font-size: 24px;
+        line-height: 34px;
+        margin: 0 auto 30px;
+    }
+
+    .hiring_button{
+        width: 290px;
+    }
+
+    .vacancies > .flex{
+        display: grid;
+        grid-template-columns: 240px 50px;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0px;
     }
 
     .start_img{
@@ -1313,5 +1940,13 @@ body{
     .start_text-lower{
         max-width: 210px;
         text-align: start;
+    }
+
+    .footer_container{
+        max-width: 290px;
+    }
+
+    .footer_container-lower{
+        max-width: 290px;
     }
 }
