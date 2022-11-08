@@ -95,6 +95,7 @@ body{
     box-sizing: border-box;
     transition: 500ms;
     transition-timing-function: ease-out;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .button:hover{
@@ -186,6 +187,77 @@ body{
     margin: 0 auto;
 }
 
+.features{
+    padding: 0 0 110px;
+    position: relative;
+}
+
+.features_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features_description::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 258px;
+    width: 88px;
+    height: 166px;
+    background-image: url(../img/Features/ouch.svg);
+    background-size: 88px 166px;
+}
+
+.features_info_title{
+    margin-bottom: 30px;
+}
+
+.features_info_text{
+    margin-bottom: 42px;
+}
+
+.capabilities{
+    max-width: 459px;
+}
+
+.capability{
+    padding: 3px 0 22px;
+    border-bottom: 1px solid rgba(43, 41, 45, 0.15);
+    margin-bottom: 20px;
+}
+
+.capability_title{
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+    width: 418px;
+}
+
+.capability > .flex{
+    cursor: pointer;
+}
+
+.capability_color-change{
+    color: rgba(49, 66, 198, 1);
+    border-bottom: 3px solid  rgba(49, 66, 198, 1);
+    transition: 300ms;
+}
+
+.capability_text{
+    margin-top: 8px;
+    font-size: 18px;
+    line-height: 26px;
+    color:rgba(43, 41, 45, 1);
+    display: none;
+}
+
+.features_flex > div:last-of-type{
+    position: absolute;
+    right: 0;
+    top: 11px;
+}
+
 .inbox{
     background-color: rgba(252, 240, 227, 0.4);
     padding: 115px 0 118px;
@@ -237,16 +309,21 @@ body{
     font-weight: 700;
     font-size: 22px;
     line-height: 34px;
-    margin-bottom: 26px;
 }
 
 .info_pretitle-orange{
     color: rgba(241, 89, 43, 1);
+    margin-bottom: 26px;
 }
 
 .info_pretitle-blue{
     color: rgba(1, 137, 209, 1);
+    margin-bottom: 24px;
+}
 
+.info_pretitle-green{
+    color: rgba(0, 155, 77, 1);
+    margin-bottom: 24px;
 }
 
 .info_title{
@@ -256,7 +333,6 @@ body{
     line-height: 56px;
     letter-spacing: -0.5px;
     color: #2B292D;
-    margin-bottom: 26px;
 }
 
 .info_text{
@@ -264,11 +340,26 @@ body{
     font-size: 24px;
     line-height: 34px;
     color: #2B292D;
+}
+
+.inbox_info_title{
+    margin-bottom: 26px;
+}
+
+.inbox_info_text{
     margin-bottom: 44px;
 }
 
 .communication{
     padding: 110px 0 105px;
+}
+
+.communication_title{
+    margin-bottom: 30px;
+}
+
+.communication_text{
+    margin-bottom: 39px;
 }
 
 .communication_image{
@@ -372,8 +463,47 @@ body{
     color: white;
 }
 
+.slider{
+    text-align: center;
+    padding: 0 0 106px;
+    position: relative;
+}
+
+.slider_title{
+    font-size: 24px;
+    line-height: 30px;
+    color: rgba(49, 66, 198, 1);
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.slider_text{
+    font-size: 24px;
+    line-height: 34px;
+    max-width: 750px;
+    margin:0 auto 34px;
+}
+
+.slider_name{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.slider_position{
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(43, 41, 45, 0.6);
+}
+
+.slider_image{
+    position: absolute;
+    top: 112px;
+    right: 26px;
+}
+
 .hiring{
-    padding: 106px 0 90px;
+    padding: 0 0 90px;
     text-align: center;
 }
 
@@ -436,14 +566,17 @@ body{
 .vacancy_pretitle-lower{
     font-size: 18px;
     line-height: 24px;
+    color: rgba(43, 41, 45, 0.6);
 }
 
 .vacancy_icon{
     font-size: 18px;
     line-height: 24px;
+    color: rgba(44, 50, 65, 0.6);
+
 }
 
-.color-change{
+.hiring_color-change{
     color: white;
     background-color: rgba(49, 65, 197, 1);
     border: 1px solid rgba(49, 65, 197, 1);
@@ -703,6 +836,84 @@ footer{
     color: rgba(43, 41, 45, 0.6);
 }
 
+.modal-overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    display: none;
+}
+
+.modal{
+    max-width: 430px;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 15px 30px 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal_close{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.modal_input{
+    width: 370px;
+    height: 48px;
+    border: 1px solid rgba(43, 41, 45, 0.2);
+    box-sizing: border-box;
+    padding-left: 15px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    line-height: 13px;
+    margin-bottom: 20px;
+}
+
+.modal_input::placeholder{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    line-height: 13px;
+}
+
+.text_sign_up{
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.sign_up{
+    width: 370px;
+    height: 48px;
+    border: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1e-05) 100%), #3040C4;
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 13px;
+    color: #FFFFFF;
+    font-weight: 700;
+    box-sizing: border-box;
+    transition: 500ms;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.sign_up:hover{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1e-05) 100%), #2e42f4;
+    cursor: pointer;
+}
+
 @keyframes Move{
     from{
         transform: translateX(300px);
@@ -733,6 +944,30 @@ footer{
     }
 }
 
+@media screen and (max-width: 1340px){
+    .features > .container{
+        max-width: 950px;
+    }
+
+    .features_flex > div:last-of-type{
+        top: 30px;
+    }
+
+    .features_img{
+        width: 600px;
+    }
+
+    .slider_title{
+        max-width: 750px;
+        margin: 0 auto 28px;
+    }
+    
+    .slider_text{
+        max-width: 600px;
+        margin:0 auto 34px;
+    }
+}
+
 @media screen and (max-width: 1200px){
     .container{
         max-width: 1040px; 
@@ -754,12 +989,28 @@ footer{
         max-width: 1040px;
     }
 
+    .features > .container{
+        max-width: 880px;
+    }
+
+    .features_flex > div:last-of-type{
+        top: 70px;
+    }
+
+    .features_img{
+        width: 520px;
+    }
+
     .footer_container{
         max-width: 940px;
     }
 
     .footer_container-lower{
         max-width: 1040px;
+    }
+
+    .slider_image{
+        width: 200px;
     }
 }
 
@@ -929,6 +1180,49 @@ footer{
         justify-self: center;
     }
 
+    .features{
+        padding: 0 0 67px;
+        text-align: center;
+    }
+
+    .features_flex{
+        display: block;
+    }
+
+    .features_description::before{
+        top: 248px;
+    }
+
+    .features_info_text{
+        line-height: 34px;
+        max-width: 392px;
+    }
+
+    .features_flex > div:last-of-type{
+        position: static;
+    }
+
+    .features_img{
+        width: 538px;
+    }
+
+    .info_pretitle-green{
+        margin-bottom: 12px;
+    }
+
+    .features_info_title{
+        margin: 0 auto 12px;
+    }
+
+    .features_info_text{
+        margin: 0 auto 50px;
+    }
+
+    .capabilities{
+        margin: 0 auto;
+        text-align: start;
+    }
+
     .flex_inbox-column{
         flex-direction: column-reverse;
     }
@@ -946,15 +1240,22 @@ footer{
     }
 
     .info_title{
-        margin: 0 auto 14px;
         font-size: 48px;
         line-height: 52px;
     }
 
     .info_text{
         max-width: 429px;
-        margin: 0 auto 41px;
         font-size: 20px;
+        line-height: 34px;
+    }
+
+    .inbox_info_title{
+        margin: 0 auto 14px;
+    }
+
+    .inbox_info_text{
+        margin: 0 auto 41px;
         line-height: 26px;
     }
 
@@ -983,7 +1284,7 @@ footer{
         line-height: 56px;
         letter-spacing: -0.5px;
         color: #2B292D;
-        margin-bottom: 19px;
+        margin: 0 auto 19px;
     }
 
     .communication_container{
@@ -992,6 +1293,8 @@ footer{
 
     .communication_text{
         max-width: 419px;
+        line-height: 26px;
+        margin-bottom: 41px;
     }
 
     .communication_button{
@@ -1044,8 +1347,28 @@ footer{
         justify-self: end;
     }
 
+    .slider{
+        padding: 41px 0 87px;
+    }
+
+    .slider_title{
+        max-width: 573px;
+        margin: 0 auto 14px;
+    }
+
+    .slider_text{
+        max-width: 584px;
+        margin: 0 auto 10px;
+    }
+
+    .slider_image{
+        position: static;
+        width: 273px;
+        margin: 0 auto;
+    }
+
     .hiring{
-        padding: 87px 0 113px;
+        padding: 0 0 113px;
     }
     
     .hiring_description{
@@ -1253,6 +1576,14 @@ footer{
         max-width: 500px;
     }
 
+    .features_description::before{
+        display: none;
+    }
+
+    .features_img{
+        width: 500px;
+    }
+
     .inbox{
         padding: 45px 0 45px;
     }
@@ -1272,6 +1603,14 @@ footer{
     .pictures{
         width: 100%;
         justify-self: center;
+    }
+
+    .slider_title{
+        max-width: 500px;
+    }
+
+    .slider_text{
+        max-width: 500px;
     }
 
     .hiring_container{
@@ -1333,7 +1672,28 @@ footer{
     }
     
     .brands-flex{
-         max-width: 430px;
+        max-width: 430px;
+    }
+
+    .features_info_title{
+        max-width: 430px;
+    }
+
+    .capabilities{
+        max-width: 430px;
+    }
+
+    .capability_title{
+        max-width: 393px;
+    }
+
+    .features_image{
+        max-width: 430px;
+        margin: 0 auto;
+    }
+
+    .features_img{
+        width: 100%;
     }
 
     .info_text-wide{
@@ -1350,6 +1710,14 @@ footer{
 
     .pictures_text{
         margin: 15px 0;
+    }
+
+    .slider_title{
+        max-width: 430px;
+    }
+
+    .slider_text{
+        max-width: 430px;
     }
 
     .hiring{
@@ -1438,6 +1806,31 @@ footer{
         margin: 10px auto;
     }
 
+    .features_info_title{
+        max-width: 340px;
+        margin: 20px auto 30px;
+    }
+
+    .features_info_text{
+        max-width: 340px;
+    }
+
+    .capabilities{
+        max-width: 340px;
+    }
+
+    .capability_title{
+        max-width: 299px;
+    }
+
+    .capability_text{
+        font-size: 16px;
+    }
+
+    .features_image{
+        max-width: 340px;
+    }
+
     .inbox{
         padding: 30px 0;
     }
@@ -1456,6 +1849,14 @@ footer{
     }
 
     .info_text-wide{
+        max-width: 340px;
+    }
+
+    .slider_title{
+        max-width: 340px;
+    }
+
+    .slider_text{
         max-width: 340px;
     }
 
@@ -1489,6 +1890,19 @@ footer{
 
     .footer_container-lower{
         max-width: 340px;
+    }
+
+    .modal{
+        max-width: 340px;
+        padding: 15px 20px 30px;
+    }
+    
+    .modal_input{
+        width: 285px;
+    }
+    
+    .sign_up{
+        width: 285px;
     }
 }
 
@@ -1570,6 +1984,42 @@ footer{
         max-width: 110px;
     }
     
+    .features{
+        padding: 0 0 45px;
+        text-align: start;
+    }
+
+    .info_pretitle-green{
+        max-width: 290px;
+        margin: 0 auto 17px;
+    }
+
+    .features_info_title{
+        margin: 0 auto 15px;
+    }
+
+    .features_info_text{
+        margin: 0 auto 33px;        
+    }
+
+    .capabilities{
+        max-width: 290px;
+    }
+
+    .capability_title{
+        max-width: 250px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .capability_text{
+        line-height: 26px;
+    }
+
+    .features_image{
+        max-width: 310px;
+    }
+
     .inbox{
         padding: 50px 0 48px;
     }
@@ -1590,23 +2040,30 @@ footer{
         text-align: start;
     }
 
-    .info_pretitle{
-        margin-bottom: 17px;
-    }
-
     .info_title{
         max-width: 290px;
         font-size: 40px;
         line-height: 40px;
         letter-spacing: -0.357143px;
-        margin-bottom: 18px;
     }
 
     .info_text{
         max-width: 290px;
         font-size: 24px;
         line-height: 34px;
-        margin-bottom: 60px;
+    }
+
+    .info_pretitle-orange{
+        max-width: 290px;
+        margin: 0 auto 17px;
+    }
+
+    .inbox_info_title{
+        margin: 0 auto 18px;
+    }
+
+    .inbox_info_text{
+        margin: 0 auto 30px;
     }
 
     .inbox_response{
@@ -1704,8 +2161,35 @@ footer{
         justify-self: center;
     }
 
+    .slider{
+        padding: 4px 0 115px;
+    }
+
+    .slider_title{
+        max-width: 310px;
+        text-align: start;
+        margin: 0 auto 29px;
+    }
+
+    .slider_text{
+        max-width: 310px;
+        text-align: start;
+        margin: 0 auto 32px;
+    }
+
+    .slider_name{
+        max-width: 310px;
+        text-align: start;
+    }
+
+    .slider_position{
+        max-width: 310px;
+        text-align: start;
+        margin: 0 auto 40px;
+    }
+
     .hiring{
-        padding: 115px 0 78px;
+        padding: 0 0 78px;
     }
 
     .hiring_container{
@@ -1872,6 +2356,19 @@ footer{
         margin-bottom: 18px;
         margin-top: 30px;
     }
+
+    .modal{
+        max-width: 310px;
+        padding: 15px 15px 30px;
+    }
+    
+    .modal_input{
+        width: 265px;
+    }
+    
+    .sign_up{
+        width: 265px;
+    }
 }
 
 @media screen and (max-width: 320px){
@@ -1891,9 +2388,29 @@ footer{
         max-width: 100px;
     }
 
+    .features_image{
+        max-width: 290px;
+    }
+
     .container-image_img{
         max-width: 290px;
         width: 100%;
+    }
+
+    .slider_title{
+        max-width: 290px;
+    }
+
+    .slider_text{
+        max-width: 290px;
+    }
+
+    .slider_name{
+        max-width: 290px;
+    }
+
+    .slider_position{
+        max-width: 290px;
     }
 
     .hiring_container{
@@ -1949,5 +2466,18 @@ footer{
 
     .footer_container-lower{
         max-width: 290px;
+    }
+
+    .modal{
+        max-width: 290px;
+        padding: 15px 15px 30px;
+    }
+    
+    .modal_input{
+        width: 245px;
+    }
+    
+    .sign_up{
+        width: 245px;
     }
 }
