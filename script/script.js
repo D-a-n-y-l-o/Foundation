@@ -10,3 +10,12 @@ $('.capability > div').on('click', function(){
     $(this).parent('.capability').toggleClass('capability_color-change');
     $(this).next('.capability_text').slideToggle(300);
 })
+
+$('#menuToggle #toggleCheckbox').change(function() {
+    if(this.checked) {
+        $('body').css({'overflow': "hidden" })
+    }
+    else {
+        $('body').css({'overflow': "visible" })
+    }
+});

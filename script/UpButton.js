@@ -13,4 +13,6 @@ $('#up').on('click', function(){
 $('#stories_link').on('click', function(e){
     e.preventDefault();
     $('html, body').animate({scrollTop: $('#stories').offset().top}, 1000);
+    document.getElementById('toggleCheckbox').checked = false;
+    $('body').css({'overflow': "visible" })
 })
